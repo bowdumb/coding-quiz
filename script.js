@@ -10,8 +10,9 @@ startButton.addEventListener('click', startQuiz);
 
 function startQuiz() {
     console.log("RELEASE TEH QUIZ!!!");
-    var timeLeft = 60;
+    var timeLeft = 5;
     startButton.classList.add('hide');
+    
     // startButton.addEventListener("click", )
     // questCont.classList.remove('hide');
     //set question text to hide?
@@ -23,7 +24,13 @@ function startQuiz() {
             // alert("Time is up - Now go pull a cork and study up!");
             clearInterval(timeInterval);
             timerEl.textContent = "";
+            
+            
+
             return;
+        
+
+            
         }
     },1000);
 }
@@ -34,13 +41,13 @@ function quizQuestion() {
 }
 
 
-function answerSelect() {
+function answerChoice() {
 
 }
 
 
 
-var question1Arr = {
+var question1 = {
 
         question:"What is the most widely planted grape in the world?",        
         answer1: "Cabernet Sauvignon", correct: true,
