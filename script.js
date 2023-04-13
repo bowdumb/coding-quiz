@@ -97,9 +97,9 @@ function nextQuestion() {
     questionIndex++;
     var prevQuestionIndex = questionIndex-1;
     console.log(this.textContent);
-    console.log(questions[prevQuestionIndex].correct);
+    // console.log(questions[prevQuestionIndex].correct);
 
-    if (questionIndex > 4) {
+    if (questionIndex > 3) {
         return alert("Hooray!");
     }
 
