@@ -50,7 +50,7 @@ var questions = [
   ];
 
 startButton.addEventListener('click', startQuiz);
-console.log(startButton);
+
 var timeLeft = 60;
 
 function startQuiz() {
@@ -76,9 +76,10 @@ function startQuiz() {
             timeLeft--;
             localStorage.setItem("score", timeLeft);
         } else {
-            // alert("Time is up - Now go pull a cork and study up!");
+           
             clearInterval(timeInterval);
             timerEl.textContent = "";
+            localStorage.setItem("score", timeLeft);
             
             
 
@@ -97,11 +98,17 @@ function nextQuestion() {
     questionIndex++;
     var prevQuestionIndex = questionIndex-1;
     console.log(this.textContent);
-    // console.log(questions[prevQuestionIndex].correct);
+    console.log(questions[prevQuestionIndex].correct);
 
     if (questionIndex > 3) {
-        return alert("Hooray!");
+        
+        prompt("Congratulations - you may have a drinking problem! Enter your name to save your high-score of " + timeLeft + " seconds!")
+        var score = timeLeft;
+    
+        return;
+        
     }
+    
 
     if (this.textContent != questions[prevQuestionIndex].correct) {
         timeLeft -= 10;
@@ -125,7 +132,7 @@ function answerChoice() {
 
 }
 
-// var quizQuestion = Object.keys()
+
 
 
 QuestionArray = [
@@ -135,34 +142,3 @@ QuestionArray = [
 
 
 ]
-
-
-
-
-
-
-
-
-
-
-
-// var count = 60;
-
-// var timeEl = document.querySelector("#timer");
-
-// var startButt = document.querySelector('.startbtn');
-
-
-
-
-// function setCounterText() {
-//     timeEl.texContent = count;
-// }
-
-// startButt.addEventListener("click", function() {
-//     console.log (setCounterText);
-    
-//     count--;
-//     setCounterText();
-// },1000);
-
