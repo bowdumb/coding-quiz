@@ -54,7 +54,7 @@ var timeLeft = 60;
 
 function startQuiz() {
     console.log("RELEASE TEH QUIZ!!!");
-    
+    // var timeLeft = 5;
     startButton.classList.add('hide');
     questionEl.textContent = questions[0].question
 
@@ -63,7 +63,6 @@ function startQuiz() {
         answerButton2.textContent = questions[0].answer2;
         answerButton3.textContent = questions[0].answer3;
         answerButton4.textContent = questions[0].answer4;
-        
         
     answerButton1.addEventListener('click', nextQuestion)
     answerButton2.addEventListener('click', nextQuestion)
@@ -80,7 +79,7 @@ function startQuiz() {
             clearInterval(timeInterval);
             timerEl.textContent = "";
             
-            alert("Time is up! Your score is " + timeLeft + "Now go pull a cork and study up!");
+            
 
             return;
         
@@ -99,10 +98,14 @@ function nextQuestion() {
     console.log(this.textContent);
     console.log(questions[prevQuestionIndex].correct);
 
+    if (questionIndex > 3) {
+        localStorage.setItem("score", timeLeft);
+        return prompt("Hooray! Your username to save your high score");
+    }
+
     if (this.textContent != questions[prevQuestionIndex].correct) {
         timeLeft -= 10;
     }
-    
 
     
 
@@ -115,28 +118,23 @@ function nextQuestion() {
         answerButton4.textContent = questions[questionIndex].answer4;
         console.log(timeLeft);
 
-        
-
 }
 
 
-// function answerChoice() {
+function answerChoice() {
 
-// }
+}
 
 // var quizQuestion = Object.keys()
 
 
-// QuestionArray = [
-//     "What is the most widely planted grape in the world?",
-//     "What two grapes are the genetic parents of Cabernet Sauvignon?",
-//     "What does the French word 'battonage' refer to?",
+QuestionArray = [
+    "What is the most widely planted grape in the world?",
+    "What two grapes are the genetic parents of Cabernet Sauvignon?",
+    "What does the French word 'battonage' refer to?",
 
 
-// ]
-
-
-
+]
 
 
 
@@ -145,4 +143,26 @@ function nextQuestion() {
 
 
 
+
+
+
+// var count = 60;
+
+// var timeEl = document.querySelector("#timer");
+
+// var startButt = document.querySelector('.startbtn');
+
+
+
+
+// function setCounterText() {
+//     timeEl.texContent = count;
+// }
+
+// startButt.addEventListener("click", function() {
+//     console.log (setCounterText);
+    
+//     count--;
+//     setCounterText();
+// },1000);
 
