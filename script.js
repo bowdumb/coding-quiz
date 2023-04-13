@@ -80,6 +80,7 @@ function startQuiz() {
             clearInterval(timeInterval);
             timerEl.textContent = "";
             localStorage.setItem("score", timeLeft);
+            alert("Sorry! Time has run out. Please try again.");
             
             
 
@@ -103,7 +104,7 @@ function nextQuestion() {
     if (questionIndex > 3) {
         
         prompt("Congratulations - you may have a drinking problem! Enter your name to save your high-score of " + timeLeft + " seconds!")
-        var score = timeLeft;
+        
     
         return;
         
