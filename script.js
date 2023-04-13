@@ -6,6 +6,7 @@ var answerButton1 = document.querySelector(".btn1");
 var answerButton2 = document.querySelector(".btn2");
 var answerButton3 = document.querySelector(".btn3");
 var answerButton4 = document.querySelector(".btn4");
+var high-score-form = document.getElementById('high-score');
 timerEl = document.getElementById('timer');
 var questions = [
     {
