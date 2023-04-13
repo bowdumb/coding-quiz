@@ -6,8 +6,7 @@ var answerButton1 = document.querySelector(".btn1");
 var answerButton2 = document.querySelector(".btn2");
 var answerButton3 = document.querySelector(".btn3");
 var answerButton4 = document.querySelector(".btn4");
-var high-score-form = document.getElementById('high-score');
-timerEl = document.getElementById('timer');
+var timerEl = document.getElementById('timer');
 var questions = [
     {
   
@@ -99,9 +98,8 @@ function nextQuestion() {
     console.log(this.textContent);
     console.log(questions[prevQuestionIndex].correct);
 
-    if (questionIndex > 3) {
-        localStorage.setItem("score", timeLeft);
-        return prompt("Hooray! Your username to save your high score");
+    if (questionIndex > 4) {
+        return alert("Hooray!");
     }
 
     if (this.textContent != questions[prevQuestionIndex].correct) {
