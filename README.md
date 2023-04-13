@@ -16,6 +16,10 @@ When interacting with this application, the user must first click on the "start"
 
 ![Load Page](./Assets/code%20quiz%20ss%201.png)
 
+
+
 ![Question Example](./Assets/code%20quiz%20ss%202.png)
+
+
 
 ![High Score Prompt](./Assets/code%20quiz%20ss%203.png)
