@@ -10,4 +10,7 @@ This application has been deployed via GitHub Pages, and can be used by followin
 
 ## Functionality
 
-When interacting with this application, the user must first clock on the "start" button to initiate the timer at 60 seconds and prompt the display of the first question. The user will then be presented with the current question, as well as four options for answers displayed in the form of buttons. When selecting the correct answer, they will advance to the next question. When presented with incorrect buttons, they will advance to the next question in addition to a 10 second deduction off of the timer. This will repeat until the user has submitted answers for all of the questions, or the timer has reached zero.
+When interacting with this application, the user must first click on the "start" button to initiate the timer at 60 seconds and prompt the display of the first question. The user will then be presented with the current question, as well as four options for answers displayed in the form of buttons. When selecting the correct answer, they will advance to the next question. When presented with incorrect buttons, they will advance to the next question in addition to a 10 second deduction off of the timer. This will repeat until the user has submitted answers for all of the questions, or the timer has reached zero. If the user answers all the questions and has time remaining on the clock, that number is to serve as their score.
+
+## Screenshots
+
