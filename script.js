@@ -1,12 +1,12 @@
 var questCont = document.getElementById("question-container");
 var questionEl = document.querySelector(".question");
-var startButton = document.querySelector('.startbtn');
+var startButton = document.querySelector('#start-btn');
 var btnAnswerEl = document.getElementById('answer-btn');
 var answerButton1 = document.querySelector(".btn1");
 var answerButton2 = document.querySelector(".btn2");
 var answerButton3 = document.querySelector(".btn3");
 var answerButton4 = document.querySelector(".btn4");
-var timerEl = document.getElementById('timer');
+var timerEl = document.querySelector('#timer');
 var questions = [
     {
   
@@ -50,6 +50,7 @@ var questions = [
   ];
 
 startButton.addEventListener('click', startQuiz);
+console.log(startButton);
 var timeLeft = 60;
 
 function startQuiz() {
